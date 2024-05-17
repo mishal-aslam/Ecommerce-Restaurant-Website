@@ -21,7 +21,7 @@ const Hero = () => {
                     Craftsmanship
                 </p>
                 <div className="md:mt-12 mt-6 flex items-center">
-                    <button className="text-white font-bold md:text-xl text-base bg-[#39DB4A] md:py-2 py-1 md:px-6 px-3 rounded-3xl">
+                    <button className="text-white font-bold md:text-xl text-base bg-[#39DB4A] hover:bg-[#50b85c] md:py-2 py-1 md:px-6 px-3 rounded-3xl">
                         {" "}
                         Order Now
                     </button>

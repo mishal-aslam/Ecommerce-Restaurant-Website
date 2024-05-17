@@ -6,7 +6,7 @@ import Juice from "../Assets/juice.png";
 
 const Categories = () => {
   return (
-    <div className="md:mt-52 mt-16 mb-44 md:px-32 px-5">
+    <div className="md:mt-52 mt-16 mb-14 md:px-32 px-5">
         <div className="place-items-center grid">
         <p className="text-[#FF6868] text-lg font-bold"> Customer Favorites</p>
         <h2 className="text-black font-bold md:text-5xl text-3xl mt-5 md:mb-20 mb-10">Popular Catagories</h2>
