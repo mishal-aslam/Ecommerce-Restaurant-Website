@@ -7,8 +7,13 @@ import OpenMenu from "../Assets/svg/OpenMenu";
 import { HiOutlineShoppingBag } from "react-icons/hi";
 import { CiSearch } from "react-icons/ci";
 import { MdOutlinePhoneInTalk } from "react-icons/md";
+import { Outlet, Link } from "react-router-dom";
 
 const Navbar = () => {
+  const handleNavigation = () => {
+    window.location.href = "/Components/Cart";
+  };
+
   const [menuOpen, setMenuOpen] = useState(false);
 
   const handleToggleMenu = () => {
@@ -61,70 +66,22 @@ const Navbar = () => {
                 </a>
               </li>
               <li className="max-lg:border-b max-lg:px-3 max-lg:py-3">
-                <a
-                  href="javascript:void(0)"
+                <Link
+                  to="/"
                   className="hover:text-[#39DB4A] text-[#39DB4A] font-semibold block text-[15px]"
                 >
                   Home
-                </a>
+                </Link>
               </li>
 
               {/* dropdown menu list  */}
               <li className="group max-lg:border-b max-lg:px-3 max-lg:py-3 relative">
-                <a
-                  href="javascript:void(0)"
+                <Link
+                  to="/menu"
                   className="hover:text-[#39DB4A] hover:fill-[#39DB4A] text-gray-600 font-semibold text-[15px] block"
                 >
                   Menu
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    width="16px"
-                    height="16px"
-                    className="ml-1 inline-block  text-[#39DB4A]"
-                    viewBox="0 0 24 24"
-                  >
-                    <path
-                      d="M12 16a1 1 0 0 1-.71-.29l-6-6a1 1 0 0 1 1.42-1.42l5.29 5.3 5.29-5.29a1 1 0 0 1 1.41 1.41l-6 6a1 1 0 0 1-.7.29z"
-                      data-name="16"
-                      fill="#39DB4A"
-                      data-original="#39DB4A"
-                    />
-                  </svg>
-                </a>
-                <ul className="absolute top-5 max-lg:top-8 left-0 z-50 block space-y-2 shadow-lg bg-white max-h-0 overflow-hidden min-w-[250px] group-hover:opacity-100 group-hover:max-h-[700px] px-6 group-hover:pb-4 group-hover:pt-6 transition-all duration-500">
-                  <li className="border-b py-3">
-                    <a
-                      href="javascript:void(0)"
-                      className="hover:text-[#007bff] hover:fill-[#007bff] text-gray-600 font-semibold text-[15px] block"
-                    >
-                      Furniture Store
-                    </a>
-                  </li>
-                  <li className="border-b py-3">
-                    <a
-                      href="javascript:void(0)"
-                      className="hover:text-[#007bff] hover:fill-[#007bff] text-gray-600 font-semibold text-[15px] block"
-                    >
-                      Electronic Store
-                    </a>
-                  </li>
-                  <li className="border-b py-3">
-                    <a
-                      href="javascript:void(0)"
-                      className="hover:text-[#007bff] hover:fill-[#007bff] text-gray-600 font-semibold text-[15px] block"
-                    >
-                      Fashion Store
-                    </a>
-                  </li>
-                  <li className="border-b py-3">
-                    <a
-                      href="javascript:void(0)"
-                      className="hover:text-[#007bff] hover:fill-[#007bff] text-gray-600 font-semibold text-[15px] block"
-                    >
-                      Shoes Store
-                    </a>
-                  </li>
-                </ul>
+                </Link>
               </li>
               {/* /////////////////// */}
               {/* dropdown menu list  */}
@@ -187,12 +144,12 @@ const Navbar = () => {
               {/* /////////////////// */}
 
               <li className="max-lg:border-b max-lg:px-3 max-lg:py-3">
-                <a
-                  href="javascript:void(0)"
+                <Link
+                  to="/blog"
                   className="hover:text-[#39DB4A] text-gray-600 font-semibold text-[15px] block"
                 >
                   Blog
-                </a>
+                </Link>
               </li>
             </ul>
             {/* /////// */}
@@ -212,7 +169,10 @@ const Navbar = () => {
               />
               <CiSearch className="absolute inset-y-0 my-auto h-8 w-12 border-r border-transparent stroke-gray-500 px-3.5 peer-focus:border-[#39DB4A] peer-focus:stroke-[#39DB4A]" />
             </div>
-            <HiOutlineShoppingBag className="w-[24px] h-[24px] md:block hidden" />
+            <div
+              onClick={handleNavigation} className="w-[24px] h-[24px] md:block hidden cursor-pointer" >
+              <HiOutlineShoppingBag />
+            </div>
             <div className="md:block hidden">
               <div className="bg-[#39DB4A] rounded-2xl py-1 px-3 flex gap-x-2 items-center ">
                 <MdOutlinePhoneInTalk className="text-white h-5 w-5 md:block hidden" />

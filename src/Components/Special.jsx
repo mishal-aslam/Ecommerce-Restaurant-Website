@@ -104,10 +104,10 @@ export default function Speacial() {
           href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick-theme.min.css"
         />
 
-        <Slider {...settings} ref={(slider) => setSlider(slider)}>
-        <Box height={"100%"} pr={20} style={{ marginRight: "20px" }}>
-            <Stack spacing={6} direction="column" height={"100%"} p={2}>
-              <Box className="relative md:h-[380px] w-[300px]  h-[320px] md:w-[340px] bg-white shadow-lg rounded-3xl p-6">
+        <Slider {...settings} ref={(slider) => setSlider(slider)} className="">
+        <Box height={"100%"} pr={20} style={{ marginRight: "20px" }} >
+            <Stack spacing={16} direction="column" height={"100%"} p={2}>
+              <Box className="relative md:h-[380px] w-[300px]  h-[320px] md:w-[300px] bg-white shadow-lg rounded-3xl p-6">
                 <IconButton
                   aria-label="favorite"
                   icon={<FaHeart />}
@@ -155,8 +155,8 @@ export default function Speacial() {
           </Box>
 
           <Box height={"100%"} pr={20} style={{ marginRight: "20px" }}>
-            <Stack spacing={6} direction="column" height={"100%"} p={2}>
-              <Box className="relative md:h-[380px] w-[300px]  h-[320px] md:w-[340px] bg-white shadow-lg rounded-3xl p-6">
+            <Stack spacing={16} direction="column" height={"100%"} p={2}>
+              <Box className="relative md:h-[380px] w-[300px]  h-[320px] md:w-[300px] bg-white shadow-lg rounded-3xl p-6">
                 <IconButton
                   aria-label="favorite"
                   icon={<FaHeart />}
@@ -204,8 +204,8 @@ export default function Speacial() {
           </Box>
 
           <Box height={"100%"} pr={20} style={{ marginRight: "20px" }}>
-            <Stack spacing={6} direction="column" height={"100%"} p={2}>
-              <Box className="relative md:h-[380px] w-[300px]  h-[320px] md:w-[340px] bg-white shadow-lg rounded-3xl p-6">
+            <Stack spacing={16} direction="column" height={"100%"} p={2}>
+              <Box className="relative md:h-[380px] w-[300px]  h-[320px] md:w-[300px] bg-white shadow-lg rounded-3xl p-6">
                 <IconButton
                   aria-label="favorite"
                   icon={<FaHeart />}
@@ -253,8 +253,8 @@ export default function Speacial() {
           </Box>
 
           <Box height={"100%"} pr={20} style={{ marginRight: "20px" }}>
-            <Stack spacing={6} direction="column" height={"100%"} p={2}>
-              <Box className="relative md:h-[380px] w-[300px]  h-[320px] md:w-[340px] bg-white shadow-lg rounded-3xl p-6">
+            <Stack spacing={16} direction="column" height={"100%"} p={12} ga>
+              <Box className="relative md:h-[380px] w-[300px]  h-[320px] md:w-[300px] bg-white shadow-lg rounded-3xl p-6">
                 <IconButton
                   aria-label="favorite"
                   icon={<FaHeart />}

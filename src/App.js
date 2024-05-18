@@ -1,22 +1,25 @@
-import Hero from "./Components/Hero";
-import Navbar from "./Components/Navbar";
-import Categories from "./Components/Categories";
-import Special from './Components/Special'
-import AboutUs from "./Components/AboutUs";
-import Services from "./Components/Services";
-import Footer from "./Components/Footer";
+import ReactDOM from "react-dom/client";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import HomePage from "./pages/HomePage/page";
+import MenuPage from './pages/MenuPage/page'
+import Blogs from './pages/Blog/page'
+import Services from './pages/Services/page'
+import Layout from "./Components/Layout/page";
+import CartPage from './Components/Cart'; 
 
 function App() {
   return (
-    <div className="App">
-  <Navbar />
-  <Hero />
-  <Categories />
-  <Special />
-  <AboutUs />
-  <Services />
-  <Footer />
-    </div>
+    <BrowserRouter>
+    <Layout>
+      <Routes>
+        <Route path="/" element={<HomePage />} />
+        <Route path="menu" element={<MenuPage />} />
+        <Route path="blog" element={<Blogs />} />
+        <Route path="services" element={<Services />} />
+        <Route path="Components/Cart" element={<CartPage />} /> 
+      </Routes>
+    </Layout>
+  </BrowserRouter>
   );
 }
 
