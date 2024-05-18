@@ -1,5 +1,5 @@
-import React from 'react';
-import { Box, Stack } from "@chakra-ui/react";
+import React, { useState } from 'react';
+import { Box, Select, useColorModeValue } from "@chakra-ui/react";
 import { FaCartPlus } from "react-icons/fa";
 import productDetails from '../../Components/ProduuctDetails';
 
@@ -38,11 +38,44 @@ const ProductBox = ({ product }) => {
 };
 
 function Page() {
+  const [selectedCategory, setSelectedCategory] = useState("All");
+  const bgColor = useColorModeValue('#39DB4A', '#39DB4A');
+
+  const handleCategoryChange = (event) => {
+    setSelectedCategory(event.target.value);
+  };
+
   return (
-    <div className="product-list" style={{ display: "flex", flexWrap: "wrap", marginTop: 12 , justifyContent: "center" }}>
-      {productDetails.map(product => (
-        <ProductBox key={product.id} product={product} />
-      ))}
+    <div>
+      <Select
+        value={selectedCategory}
+        onChange={handleCategoryChange}
+        className="w-full md:w-[300px] px-3 py-5 text-center items-center m-auto pb-8"
+        style={{ marginBottom: 12 }}
+        color="white"
+        height="30px"
+        padding="12px"
+        fontWeight="bold"
+        fontSize="lg"
+        bgColor={bgColor}
+        borderColor="#39DB4A"
+        _hover={{ bgColor: "#39DB4A" }}
+        _focus={{ bgColor: "#39DB4A" }}
+        _selected={{ bgColor: "#39DB4A" }}
+        _active={{ bgColor: "#39DB4A" }}
+      >
+        <option value="All">All Categories</option>
+        {[...new Set(productDetails.map((product) => product.category))].map((category) => (
+          <option key={category} value={category}>{category}</option>
+        ))}
+      </Select>
+      <div className="product-list" style={{ display: "flex", flexWrap: "wrap", marginTop: 12 , justifyContent: "center" }}>
+        {productDetails
+          .filter((product) => selectedCategory === "All" || product.category === selectedCategory)
+          .map((product) => (
+            <ProductBox key={product.id} product={product} />
+          ))}
+      </div>
     </div>
   );
 }

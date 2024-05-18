@@ -110,33 +110,33 @@ const Navbar = () => {
                   <li className="border-b py-3">
                     <a
                       href="javascript:void(0)"
-                      className="hover:text-[#007bff] hover:fill-[#007bff] text-gray-600 font-semibold text-[15px] block"
+                      className="hover:text-[#39DB4Av] hover:fill-[#39DB4A] text-gray-600 font-semibold text-[15px] block"
                     >
-                      Furniture Store
+                      Item 1
                     </a>
                   </li>
                   <li className="border-b py-3">
                     <a
                       href="javascript:void(0)"
-                      className="hover:text-[#007bff] hover:fill-[#007bff] text-gray-600 font-semibold text-[15px] block"
+                      className="hover:text-[#39DB4A] hover:fill-[#39DB4A] text-gray-600 font-semibold text-[15px] block"
                     >
-                      Electronic Store
+                   Item 2
                     </a>
                   </li>
                   <li className="border-b py-3">
                     <a
                       href="javascript:void(0)"
-                      className="hover:text-[#007bff] hover:fill-[#007bff] text-gray-600 font-semibold text-[15px] block"
+                      className="hover:text-[#39DB4A] hover:fill-[#39DB4A] text-gray-600 font-semibold text-[15px] block"
                     >
-                      Fashion Store
+                     Item 3
                     </a>
                   </li>
                   <li className="border-b py-3">
                     <a
                       href="javascript:void(0)"
-                      className="hover:text-[#007bff] hover:fill-[#007bff] text-gray-600 font-semibold text-[15px] block"
+                      className="hover:text-[#39DB4A] hover:fill-[#39DB4A] text-gray-600 font-semibold text-[15px] block"
                     >
-                      Shoes Store
+                   Item 4
                     </a>
                   </li>
                 </ul>
